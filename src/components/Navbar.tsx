@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../public/logo.png";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
     const links = (
@@ -23,8 +23,8 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="border-b border-[#1C1F26] px-6 py-2">
-            <div className="navbar max-w-7xl w-full mx-auto">
+        <nav className="border-b border-[#1C1F26]">
+            <div className="navbar max-w-7xl w-full mx-auto px-6 py-2">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div
@@ -64,13 +64,18 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1">{links}</ul>
                 </div>
                 <div className="navbar-end space-x-6">
-                    <Link href={"/my-plans"} className="space-x-2">
+                    <Link
+                        href="/my-plans"
+                        className="inline-flex items-center gap-2 transition-opacity duration-200 hover:opacity-80">
                         <span className="font-medium text-[#D1D5DB]">Plan</span>
                         <span className="text-black bg-[#C2F800] rounded-full font-bold px-2 pb-px">
                             0
                         </span>
                     </Link>
-                    <Link href={"/my-plans"} className="space-x-2">
+
+                    <Link
+                        href="/my-plans"
+                        className="inline-flex items-center gap-2 transition-opacity duration-200 hover:opacity-80">
                         <span className="font-medium text-[#9CA3AF]">
                             Saved
                         </span>
