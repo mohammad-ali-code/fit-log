@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const MyPlans = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+    return <main className="max-w-7xl w-full mx-auto">
+        
+    </main>;
 };
 
 export default MyPlans;
