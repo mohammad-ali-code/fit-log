@@ -1,7 +1,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html {
+    scroll-behavior: smooth;
+}
+
 @theme {
-  --font-inter: var(--font-inter);
-  --font-oswald: var(--font-oswald);
+    --font-inter: var(--font-inter);
+    --font-oswald: var(--font-oswald);
 }

@@ -18,9 +18,11 @@ const HeroSection = () => {
                         lift, lock it into today&apos;s plan, and watch the
                         week&apos;s work add up.
                     </p>
-                    <button className="inline-block font-bold text-xs font-inter rounded-md bg-[#C2F800] text-black px-6 py-3 transition-all duration-200 hover:bg-[#d4ff33] hover:scale-105 active:scale-95">
-                        <Link href={"/"}>BROWSE WORKOUTS</Link>
-                    </button>
+                    <Link href="#library">
+                        <button className="inline-block font-bold text-xs font-inter rounded-md bg-[#C2F800] text-black px-6 py-3 transition-all duration-200 hover:bg-[#d4ff33] hover:scale-105 active:scale-95">
+                            BROWSE WORKOUTS
+                        </button>
+                    </Link>
                 </div>
                 <Image src={heroImage} alt="Hero image."></Image>
             </div>
