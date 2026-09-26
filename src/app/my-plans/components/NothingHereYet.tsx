@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const NothingHereYet = () => {
     return (
-        <div className="flex text-center justify-center items-center flex-col rounded-xl border-2 border-dashed border-[rgba(255,255,255,0.15)] py-24 mx-1.5 space-y-6">
+        <div className="flex text-center justify-center items-center flex-col rounded-xl border-2 border-dashed border-[rgba(255,255,255,0.15)] py-24 p-4 mx-1.5 space-y-6">
             <div className="space-y-2">
                 <h3 className="font-oswald text-xl font-bold text-white">
                     NOTHING HERE YET

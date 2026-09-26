@@ -15,10 +15,10 @@ const MyPlans = () => {
                     Cap of five lifts for today. Finish them, then load more.
                 </p>
             </section>
-            <section className="grid grid-cols-3 bg-[#13161D] border-2 border-[#232732] p-8 rounded-2xl">
+            <section className="grid grid-cols-3 bg-[#13161D] border-2 border-[#232732] p-3 sm:p-8 rounded-2xl">
                 <MetricsSummarySection></MetricsSummarySection>
             </section>
-            <section className="flex justify-between items-center">
+            <section className="flex justify-center sm:justify-between flex-wrap items-center gap-4">
                 <TabOptions></TabOptions>
                 <SortOptions></SortOptions>
             </section>

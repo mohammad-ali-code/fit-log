@@ -15,7 +15,7 @@ const SavedOrPlanWorkoutCard = ({
     selectedWorkout,
 }: SavedOrPlanWorkoutCardPropsType) => {
     return (
-        <div className="flex justify-between items-center rounded-2xl bg-[#14171E] border border-[#232732] p-4">
+        <div className="flex justify-between items-center flex-col sm:flex-row rounded-2xl bg-[#14171E] border border-[#232732] p-4">
             <div className="flex items-center gap-4">
                 <div className="h-20 w-36 shrink-0 overflow-hidden">
                     <Image

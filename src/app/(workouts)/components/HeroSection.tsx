@@ -4,13 +4,13 @@ import Link from "next/link";
 
 const HeroSection = () => {
     return (
-        <section className="bg-[#15171D] border border-[#222630] rounded-2xl p-14">
-            <div className="flex justify-between items-center">
-                <div className="space-y-5 max-w-lg">
+        <section className="bg-[#15171D] border border-[#222630] rounded-2xl p-4 sm:p-14">
+            <div className="flex justify-between flex-col-reverse md:flex-row items-center">
+                <div className="space-y-5 md:max-w-sm lg:max-w-lg">
                     <p className="text-[#C2F800] font-bold font-inter text-xs">
                         WORKOUT LIBRARY
                     </p>
-                    <h1 className="text-6xl font-extrabold font-oswald text-white">
+                    <h1 className="text-4xl lg:text-6xl font-extrabold font-oswald text-white">
                         TRAIN WITH INTENT. LOG EVERY SET.
                     </h1>
                     <p className="text-[#9CA3AF] font-inter">

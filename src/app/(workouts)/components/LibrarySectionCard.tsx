@@ -15,7 +15,7 @@ const LibrarySectionCard = ({ workout }: LibrarySectionCard) => {
         <Link href={`/workout-details/${workout.id}`}>
             <div className="group cursor-pointer overflow-hidden rounded-2xl bg-[#15171D] border border-[#2A2E39] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#C2F800] hover:shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-65 sm:h-48 md:h-60 lg:h-48 overflow-hidden">
                     <Image
                         src={workout.image}
                         alt={`${workout.name} image`}
