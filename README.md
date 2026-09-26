@@ -1,24 +1,14 @@
 # 🏋️ FitLog — Workout Library
 
-**FitLog** is a modern, responsive workout library and daily workout planning application. It allows users to browse exercises, view detailed workout information, add exercises to today's plan, save workouts for later, and track completed exercises.
+**FitLog** is a modern, responsive workout library and daily workout planning application. It allows users to browse exercises, view detailed workout information, add exercises to today's plan, and save workouts for later.
 
 The application is designed with a dark, focused gym aesthetic and provides a simple way to organize and log daily workouts.
-
----
-
-## 🚀 Live Demo
-
-🔗 **Live Website:** [Add your deployed website URL here]
-
-🔗 **GitHub Repository:** [Add your GitHub repository URL here]
 
 ---
 
 ## 📌 About The Project
 
 FitLog is built around a workout library containing exercises for different muscle groups. Users can explore the available workouts, view detailed information about each exercise, and organize their workouts through the **My Plan** page.
-
-The application includes a daily plan with a maximum of five exercises, saved workouts, live workout statistics, completion tracking, and toast notifications for user actions.
 
 ---
 
@@ -51,7 +41,6 @@ The application includes a daily plan with a maximum of five exercises, saved wo
 
 ### 📋 My Plan
 - Manage today's workouts from one place.
-- Maximum of five workouts in today's plan.
 - Live summary of:
   - Exercises
   - Total minutes
@@ -166,8 +155,6 @@ Minutes → Sum of workout durations
 Calories → Sum of workout calories
 ```
 
-The plan supports up to **five workouts** at a time.
-
 ---
 
 ## 🔄 Workout Actions
@@ -216,31 +203,6 @@ A **Go to workouts** button allows users to return to the workout library.
 ### 404 Page
 
 A custom `not-found.tsx` page handles unknown or invalid routes.
-
----
-
-## 📱 Responsive Design
-
-FitLog is designed to work across different screen sizes.
-
-### Desktop
-
-- Three-column workout grid
-- Two-column workout details layout
-- Full navigation
-
-### Tablet
-
-- Responsive workout grid
-- Adapted spacing and typography
-- Flexible navigation
-
-### Mobile
-
-- Single-column workout cards
-- Stacked workout details layout
-- Mobile-friendly navigation
-- Responsive buttons and content
 
 ---
 
@@ -313,129 +275,3 @@ Run the production server:
 ```bash
 npm start
 ```
-
----
-
-## 🔐 Environment Variables
-
-If your project requires environment variables, create a `.env.local` file:
-
-```env
-NEXT_PUBLIC_API_URL=your_api_url_here
-```
-
-Do not commit private API keys or secrets to GitHub.
-
----
-
-## 📁 Project Structure
-
-A simplified structure of the project:
-
-```text
-fitlog/
-├── public/
-│   └── images/
-│
-├── src/
-│   ├── app/
-│   │   ├── my-plan/
-│   │   │   └── page.tsx
-│   │   │
-│   │   ├── workout/
-│   │   │   └── [id]/
-│   │   │       └── page.tsx
-│   │   │
-│   │   ├── layout.tsx
-│   │   ├── not-found.tsx
-│   │   └── page.tsx
-│   │
-│   ├── components/
-│   │   ├── Navbar/
-│   │   ├── Hero/
-│   │   ├── WorkoutCard/
-│   │   ├── WorkoutDetails/
-│   │   └── Footer/
-│   │
-│   ├── contexts/
-│   │   └── WorkoutProvider.tsx
-│   │
-│   ├── types/
-│   │   └── workout.ts
-│   │
-│   └── ...
-│
-├── .env.local
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
----
-
-## 🧠 Core Functionality
-
-FitLog uses shared application state to keep workout information synchronized across the application.
-
-For example:
-
-```text
-Workout Details
-      │
-      │ Add Workout
-      ▼
-Workout Context
-      │
-      ├──────────────► Navbar Counters
-      │
-      └──────────────► My Plan
-```
-
-This allows the navbar counters and My Plan page to update when the user adds, saves, completes, or removes a workout.
-
----
-
-## 🏆 Challenge Features
-
-The project also implements the additional challenge requirements:
-
-- ✅ Workout sorting dropdown
-- ✅ Sort by Duration
-- ✅ Sort by Calories
-- ✅ Sort by Rating
-- ✅ Mark workout as done
-- ✅ Remove workout
-- ✅ Toast notification for actions
-- ✅ Dynamic plan statistics
-- ✅ Responsive UI
-- ✅ Custom 404 page
-
----
-
-## 📈 Future Improvements
-
-Possible future improvements include:
-
-- User authentication
-- Persistent workout plans
-- Workout history
-- Personal progress tracking
-- Custom workout creation
-- Weekly/monthly statistics
-- Database-backed user plans
-- Dark/light theme support
-- Workout search and filtering
-
----
-
-## 👨‍💻 Author
-
-**[Your Name]**
-
-Built as a frontend development project focused on responsive UI design, API integration, state management, and modern Next.js development.
-
----
-
-## 📄 License
-
-This project was created for educational and portfolio purposes.
