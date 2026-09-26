@@ -1,93 +1,441 @@
-🐣 Basic Requirements (Must Do for Everyone)
-Your app must work on all screen sizes — mobile, tablet, and desktop
-Make at least 8 Git commits with clear, meaningful messages (e.g., "added to today's plan card component")
-Your app must run without any errors after deployment
-Add a nice README.md file with your project name, description, technologies used, and features(minimum 5)
-🔧 Main Requirements — 50 Marks
-1. 🔝 Navbar
-Design the Navbar exactly like the Figma design
-Put your logo on the left side
-Put your navigation links on the middle — links are: Workout, My Plan
-The active page link should look different (highlighted), just like the Figma design
-Right-side status badges (counters): a "Plan" badge and a "Saved" badge, each showing a number.
-Plan badge = filled pill with accent background (e.g. #ccff00).
-Saved badge = pill with outline/border only.
-2. 🅱️ Hero / Banner (Top of the Home page)
-Eyebrow text: "WORKOUT LIBRARY".
-Main heading: "TRAIN WITH INTENT. LOG EVERY SET." (uppercase, bold display font, e.g. Oswald).
-Subtitle: "FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up."
-A primary CTA button with an icon: "BROWSE WORKOUTS".
-It scrolls the user down to the #library section on the same page (an anchor link, not a route change).
-A banner/hero image on the right side.
-2.1 Navbar behavior (see also section 1)
-The "Plan" and "Saved" badge counters in the navbar both link to /my-plan.
-The badge numbers reflect the number of items currently in Today's Plan and Saved.( See Requirements Below)
-3. ⚖️ The Library Section (Home Page)
-Heading: "THE LIBRARY" with subtitle "Twelve lifts covering every major muscle group."
-Display all workouts from the API's data as cards in a 3x4 grid on large screens (like the design). Must be responsive.
-Each card must show:
-📷 Illustration/image
-🏷️ Category tag pills (e.g. CHEST, ARMS)
-📛 Workout name (e.g. "BARBELL BENCH PRESS")
-🖇️ Equipment line (e.g. "Barbell, Bench")
-🔴 Stats row with icons: duration (25 min), calories (180 kcal), rating (4.8)
-🧭 Clicking a card navigates the user to that workout's Detail Page.
-4. Workout Details Page — Layout (two-column, follow the design)
-Left Side — Visual/Media:
+# 🏋️ FitLog — Workout Library
 
-A large image/illustration of the workout fills the column.
-Right Side — sections:
+**FitLog** is a modern, responsive workout library and daily workout planning application. It allows users to browse exercises, view detailed workout information, add exercises to today's plan, save workouts for later, and track completed exercises.
 
-Title: "BARBELL BENCH PRESS"
-Subtitle/description: "A compound press that builds chest thickness, triceps, and pressing power from a stable bench."
-Category tags: Chest, Arms
-Key Specs table/panel with label + value rows:
-EQUIPMENT / DIFFICULTY / SETS / REPS / DURATION / CALORIES / RATING (e.g. Barbell, Bench / Intermediate / 4 / 6-8 / 25 min / 180 kcal / 4.8)
-INSTRUCTIONS section: ordered list of 4 steps (number + text)
-Call-to-action buttons:
-Primary button: "Add to today's plan" (with icon)
-Secondary button: "Save for later" (with icon)
-5. Details Page — Button Functionality
-Clicking "Add to today's plan":
-Adds the workout to the Today's Plan tab on the My Plan page.
-Increments the "Plan" badge counter in the navbar.
-Shows a toast notification (e.g. "Added to today's plan").
-Clicking "Save for later":
-Adds the workout to the Saved tab on the My Plan page.
-Increments the "Saved" badge counter in the navbar.
-Shows a toast notification.
-On the My Plan page, each planned workout card has:
-"View Details" button → opens the workout detail page.
-6. My Plan Page (/my-plan) — the "log" page
-Follow the live site + design exactly:
+The application is designed with a dark, focused gym aesthetic and provides a simple way to organize and log daily workouts.
 
-Title: "MY PLAN", subtitle: "Cap of five lifts for today. Finish them, then load more."
-Metrics Summary row (3 stat cards): Exercises, Minutes, Calories — start at 0 and update live as items are added/removed from the plan.
-Tabs: Today's Plan / Saved (active tab highlighted).
-Loading state: show "Loading workouts…" while fetching before the list renders.
-Workout cards list: each entry shows thumbnail, title (e.g. "RUSSIAN TWIST"), equipment (e.g. "Medicine Ball"), and a stats row with duration / calories / rating icons + action buttons (View Details / Mark as Done / X remove).
-Empty state (when the list is empty): "NOTHING HERE YET", text "Browse the library and add a lift to get today moving.", and a CTA button "Go to workouts" (links back to /).
-7. Footer
-Match the Figma design: dark footer.
-Left: brand logo icon + FITLOG.
-Right: copyright line: "© 2026 FitLog — Workout Library. Train hard, log honest."
-8. Responsive Design
-The entire website must work correctly on mobile, tablet, and desktop screen sizes (grid collapses correctly, navbar stays usable, hero stacks, etc.).
-Requirement
-Add a 404 Page for any unknown/invalid route
-Show a loading animation while the exercise data is being fetched on the Home page
-Show a relevant toast notification when the detail's page button.
-Make sure reloading any page after deployment does not cause an error
-Challenge Requirements — 10 Marks
-C1. - Sort dropdown:
-"Sort By" → options Duration, Calories, Rating (default Duration, with chevron icon); it re-sorts the current list.
+---
 
-C2. GitHub README
-Add a well-designed README.md that includes:
-Project name
-Short description
-Technologies used
-5 key features of the project
-C3. - On the My Plan page, each planned workout card has:
-"Mark as Done" button (with check icon) → marks the workout done, shows a toast.
-Remove (X) button → removes the workout, shows a toast.
+## 🚀 Live Demo
+
+🔗 **Live Website:** [Add your deployed website URL here]
+
+🔗 **GitHub Repository:** [Add your GitHub repository URL here]
+
+---
+
+## 📌 About The Project
+
+FitLog is built around a workout library containing exercises for different muscle groups. Users can explore the available workouts, view detailed information about each exercise, and organize their workouts through the **My Plan** page.
+
+The application includes a daily plan with a maximum of five exercises, saved workouts, live workout statistics, completion tracking, and toast notifications for user actions.
+
+---
+
+## ✨ Key Features
+
+### 🏋️ Workout Library
+- Browse all available workouts from the API.
+- Responsive workout card grid.
+- Each workout displays:
+  - Workout image
+  - Muscle group/category
+  - Equipment
+  - Duration
+  - Calories
+  - Rating
+- Sort workouts by:
+  - Duration
+  - Calories
+  - Rating
+
+### 📖 Workout Details
+- Dedicated detail page for every workout.
+- Large workout illustration.
+- Workout description and categories.
+- Equipment and difficulty information.
+- Sets, reps, duration, calories, and rating.
+- Step-by-step workout instructions.
+- Add workouts to today's plan.
+- Save workouts for later.
+
+### 📋 My Plan
+- Manage today's workouts from one place.
+- Maximum of five workouts in today's plan.
+- Live summary of:
+  - Exercises
+  - Total minutes
+  - Total calories
+- Switch between **Today's Plan** and **Saved** workouts.
+- View workout details directly from the plan.
+- Mark workouts as completed.
+- Remove workouts from the plan.
+
+### 🔔 User Feedback
+- Toast notifications for important actions.
+- Notifications when workouts are:
+  - Added to today's plan
+  - Saved
+  - Marked as completed
+  - Removed
+
+### 📱 Responsive Design
+- Fully responsive across:
+  - Mobile
+  - Tablet
+  - Desktop
+- Responsive workout grid.
+- Mobile-friendly navigation.
+- Hero section adapts to smaller screens.
+- Workout detail layout changes from two columns to a stacked layout.
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+
+### Libraries
+- **React Icons** — Icons throughout the application
+- **React Toastify** — Toast notifications
+
+### Data
+- **Workout API** — Provides workout/exercise data
+
+### Development Tools
+- **Git**
+- **GitHub**
+- **Vercel** — Deployment
+
+---
+
+## 📂 Main Pages
+
+| Page | Description |
+|---|---|
+| `/` | Workout library and hero section |
+| `/workout/[id]` | Individual workout details |
+| `/my-plan` | Today's Plan and Saved workouts |
+| `not-found.tsx` | Custom 404 page for invalid routes |
+
+---
+
+## 🧭 Application Flow
+
+```text
+                    ┌──────────────────┐
+                    │      Home        │
+                    │ Workout Library  │
+                    └────────┬─────────┘
+                             │
+                    Select a workout
+                             │
+                             ▼
+                  ┌────────────────────┐
+                  │  Workout Details   │
+                  └─────────┬──────────┘
+                            │
+                 ┌──────────┴──────────┐
+                 │                     │
+                 ▼                     ▼
+          Add to Today's Plan     Save for Later
+                 │                     │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                    ┌────────────────┐
+                    │    My Plan     │
+                    ├────────────────┤
+                    │ Today's Plan   │
+                    │ Saved          │
+                    └───────┬────────┘
+                            │
+                 ┌──────────┴──────────┐
+                 │                     │
+                 ▼                     ▼
+          Mark as Done              Remove
+```
+
+---
+
+## 📊 Today's Plan
+
+The **Today's Plan** section provides a quick overview of the user's selected workouts.
+
+The metrics are calculated dynamically:
+
+```text
+Exercises → Number of planned workouts
+
+Minutes → Sum of workout durations
+
+Calories → Sum of workout calories
+```
+
+The plan supports up to **five workouts** at a time.
+
+---
+
+## 🔄 Workout Actions
+
+Users can perform several actions throughout the application.
+
+| Action | Result |
+|---|---|
+| Add to Today's Plan | Adds workout to today's plan |
+| Save for Later | Adds workout to Saved |
+| View Details | Opens workout detail page |
+| Mark as Done | Marks workout as completed |
+| Remove | Removes workout from the current list |
+| Sort | Reorders the current workout list |
+
+Each important action provides visual feedback through a toast notification.
+
+---
+
+## ⏳ Loading & Error Handling
+
+The application includes appropriate UI states for different situations.
+
+### Loading State
+
+While workout data is being fetched:
+
+```text
+Loading workouts…
+```
+
+A loading animation is displayed instead of showing an incomplete workout list.
+
+### Empty State
+
+When there are no workouts in a selected list:
+
+```text
+NOTHING HERE YET
+
+Browse the library and add a lift to get today moving.
+```
+
+A **Go to workouts** button allows users to return to the workout library.
+
+### 404 Page
+
+A custom `not-found.tsx` page handles unknown or invalid routes.
+
+---
+
+## 📱 Responsive Design
+
+FitLog is designed to work across different screen sizes.
+
+### Desktop
+
+- Three-column workout grid
+- Two-column workout details layout
+- Full navigation
+
+### Tablet
+
+- Responsive workout grid
+- Adapted spacing and typography
+- Flexible navigation
+
+### Mobile
+
+- Single-column workout cards
+- Stacked workout details layout
+- Mobile-friendly navigation
+- Responsive buttons and content
+
+---
+
+## 🎨 Design
+
+The UI follows a dark, minimal, gym-focused visual style.
+
+### Design Characteristics
+
+- Dark background
+- High-contrast typography
+- Bright lime accent color
+- Rounded cards and buttons
+- Workout-focused imagery
+- Responsive layouts
+- Clear visual hierarchy
+
+The primary accent color is:
+
+```text
+#CCFF00
+```
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repository-url>
+```
+
+### 2. Navigate into the project
+
+```bash
+cd fitlog
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+### 5. Open the application
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 📦 Build For Production
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Run the production server:
+
+```bash
+npm start
+```
+
+---
+
+## 🔐 Environment Variables
+
+If your project requires environment variables, create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_API_URL=your_api_url_here
+```
+
+Do not commit private API keys or secrets to GitHub.
+
+---
+
+## 📁 Project Structure
+
+A simplified structure of the project:
+
+```text
+fitlog/
+├── public/
+│   └── images/
+│
+├── src/
+│   ├── app/
+│   │   ├── my-plan/
+│   │   │   └── page.tsx
+│   │   │
+│   │   ├── workout/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── layout.tsx
+│   │   ├── not-found.tsx
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── Navbar/
+│   │   ├── Hero/
+│   │   ├── WorkoutCard/
+│   │   ├── WorkoutDetails/
+│   │   └── Footer/
+│   │
+│   ├── contexts/
+│   │   └── WorkoutProvider.tsx
+│   │
+│   ├── types/
+│   │   └── workout.ts
+│   │
+│   └── ...
+│
+├── .env.local
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+---
+
+## 🧠 Core Functionality
+
+FitLog uses shared application state to keep workout information synchronized across the application.
+
+For example:
+
+```text
+Workout Details
+      │
+      │ Add Workout
+      ▼
+Workout Context
+      │
+      ├──────────────► Navbar Counters
+      │
+      └──────────────► My Plan
+```
+
+This allows the navbar counters and My Plan page to update when the user adds, saves, completes, or removes a workout.
+
+---
+
+## 🏆 Challenge Features
+
+The project also implements the additional challenge requirements:
+
+- ✅ Workout sorting dropdown
+- ✅ Sort by Duration
+- ✅ Sort by Calories
+- ✅ Sort by Rating
+- ✅ Mark workout as done
+- ✅ Remove workout
+- ✅ Toast notification for actions
+- ✅ Dynamic plan statistics
+- ✅ Responsive UI
+- ✅ Custom 404 page
+
+---
+
+## 📈 Future Improvements
+
+Possible future improvements include:
+
+- User authentication
+- Persistent workout plans
+- Workout history
+- Personal progress tracking
+- Custom workout creation
+- Weekly/monthly statistics
+- Database-backed user plans
+- Dark/light theme support
+- Workout search and filtering
+
+---
+
+## 👨‍💻 Author
+
+**[Your Name]**
+
+Built as a frontend development project focused on responsive UI design, API integration, state management, and modern Next.js development.
+
+---
+
+## 📄 License
+
+This project was created for educational and portfolio purposes.
