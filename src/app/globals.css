@@ -9,3 +9,53 @@ html {
     --font-inter: var(--font-inter);
     --font-oswald: var(--font-oswald);
 }
+
+/* Not-fount page animation */
+@theme {
+    --animate-lift: lift 2s ease-in-out infinite;
+}
+
+@keyframes lift {
+    0%,
+    100% {
+        transform: translateY(12px) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(4deg);
+    }
+}
+
+/* Loading component animation */
+@keyframes lift {
+    0%,
+    100% {
+        transform: translateY(3px) rotate(-4deg);
+    }
+
+    50% {
+        transform: translateY(-3px) rotate(4deg);
+    }
+}
+
+@keyframes loading-dot {
+    0%,
+    60%,
+    100% {
+        opacity: 0.25;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+}
+
+.animate-lift {
+    animation: lift 1.4s ease-in-out infinite;
+}
+
+.animate-loading-dot {
+    animation: loading-dot 1.2s ease-in-out infinite;
+}

@@ -18,7 +18,7 @@ const SaveForLaterButton = ({ workout }: SaveForLaterButtonPropsType) => {
 
     const handleWorkoutSave = () => {
         if (alreadyAdded) {
-            toast.error("Workout already in Save.", {
+            toast.error("Workout already to Saved.", {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: true,
@@ -36,7 +36,7 @@ const SaveForLaterButton = ({ workout }: SaveForLaterButtonPropsType) => {
 
         if (!alreadyAdded) {
             setWorkoutSaves((prev) => [...prev, workout]);
-            toast.success("Workout added in Save.", {
+            toast.success("Workout added in Saved.", {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: true,

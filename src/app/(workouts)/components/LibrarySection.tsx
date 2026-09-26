@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Suspense } from "react";
 import LibrarySectionGrid from "./LibrarySectionGrid";
+import Loading from "@/components/Loading";
 
 const LibrarySection = () => {
     return (
@@ -12,7 +13,9 @@ const LibrarySection = () => {
                     Twelve lifts covering every major muscle group.
                 </p>
             </div>
-            <LibrarySectionGrid></LibrarySectionGrid>
+            <Suspense fallback={<Loading></Loading>}>
+                <LibrarySectionGrid></LibrarySectionGrid>
+            </Suspense>
         </section>
     );
 };

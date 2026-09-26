@@ -16,11 +16,9 @@ const AddToPlanButton = ({ workout }: AddToPlanButtonPropsType) => {
         (singlePlan) => singlePlan.id === workout.id,
     );
 
-    console.log(alreadyAdded);
-
     const handleAddToPlan = () => {
         if (alreadyAdded) {
-            toast.error("Workout already in Plan.", {
+            toast.error("Workout already in today's Plan.", {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: true,
@@ -38,7 +36,7 @@ const AddToPlanButton = ({ workout }: AddToPlanButtonPropsType) => {
 
         if (!alreadyAdded) {
             setWorkoutPlan((prev) => [...prev, workout]);
-            toast.success("Workout added in Plan.", {
+            toast.success("Workout added to today's Plan.", {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: true,
