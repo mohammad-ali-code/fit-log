@@ -43,27 +43,27 @@ const WorkoutDetails = async ({ params }: WorkoutDetailsPropsType) => {
                         ))}
                     </div>
                     <div className="font-inter bg-[#151922] border border-[#232834] rounded-2xl mb-8.5">
-                        <div className="flex justify-between items-center px-6 py-3.5">
+                        <div className="flex justify-between items-center px-6 py-3.5 border-b border-[#232834]">
                             <span>EQUIPMENT</span>
                             <span>{workout.equipment}</span>
                         </div>
-                        <div className="flex justify-between items-center px-6 py-3.5">
+                        <div className="flex justify-between items-center px-6 py-3.5 border-b border-[#232834]">
                             <span>DIFFICULTY</span>
                             <span>{workout.difficulty}</span>
                         </div>
-                        <div className="flex justify-between items-center px-6 py-3.5">
+                        <div className="flex justify-between items-center px-6 py-3.5 border-b border-[#232834]">
                             <span>SETS</span>
                             <span>{workout.sets}</span>
                         </div>
-                        <div className="flex justify-between items-center px-6 py-3.5">
+                        <div className="flex justify-between items-center px-6 py-3.5 border-b border-[#232834]">
                             <span>REPS</span>
                             <span>{workout.reps}</span>
                         </div>
-                        <div className="flex justify-between items-center px-6 py-3.5">
+                        <div className="flex justify-between items-center px-6 py-3.5 border-b border-[#232834]">
                             <span>DURATION</span>
                             <span>{workout.duration} min</span>
                         </div>
-                        <div className="flex justify-between items-center px-6 py-3.5">
+                        <div className="flex justify-between items-center px-6 py-3.5 border-b border-[#232834]">
                             <span>CALORIES</span>
                             <span>{workout.caloriesBurned} kcal</span>
                         </div>

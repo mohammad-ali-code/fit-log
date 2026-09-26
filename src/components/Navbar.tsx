@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
+import NavbarWorkoutLinks from "./NavbarWorkoutLinks";
 
 const Navbar = () => {
     const links = (
@@ -64,25 +65,7 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1">{links}</ul>
                 </div>
                 <div className="navbar-end space-x-6">
-                    <Link
-                        href="/my-plans"
-                        className="inline-flex items-center gap-2 transition-opacity duration-200 hover:opacity-80">
-                        <span className="font-medium text-[#D1D5DB]">Plan</span>
-                        <span className="text-black bg-[#C2F800] rounded-full font-bold px-2 pb-px">
-                            0
-                        </span>
-                    </Link>
-
-                    <Link
-                        href="/my-plans"
-                        className="inline-flex items-center gap-2 transition-opacity duration-200 hover:opacity-80">
-                        <span className="font-medium text-[#9CA3AF]">
-                            Saved
-                        </span>
-                        <span className="border-3 border-[#2D313B] rounded-full font-bold px-2 pb-px">
-                            0
-                        </span>
-                    </Link>
+                    <NavbarWorkoutLinks></NavbarWorkoutLinks>
                 </div>
             </div>
         </nav>
