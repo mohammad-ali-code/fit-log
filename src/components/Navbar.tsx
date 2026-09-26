@@ -2,24 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
 import NavbarWorkoutLinks from "./NavbarWorkoutLinks";
+import NavbarRoutesLink from "./NavbarRoutesLink";
 
 const Navbar = () => {
     const links = (
         <>
-            <li>
-                <Link
-                    href={"/"}
-                    className="font-semibold text-[#C2F800] bg-[#1A2312] rounded-full px-4 py-1.5">
-                    Workouts
-                </Link>
-            </li>
-            <li>
-                <Link
-                    href={"/my-plans"}
-                    className="font-medium text-[#9CA3AF] hover:text-[#C2F800] rounded-full hover:font-semibold">
-                    My Plan
-                </Link>
-            </li>
+            <NavbarRoutesLink
+                routeName="Workouts"
+                routePath="/"></NavbarRoutesLink>
+            <NavbarRoutesLink
+                routeName="My Plans"
+                routePath="/my-plans"></NavbarRoutesLink>
         </>
     );
 
