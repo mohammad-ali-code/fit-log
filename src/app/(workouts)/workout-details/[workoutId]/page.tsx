@@ -21,7 +21,7 @@ const WorkoutDetails = async ({ params }: WorkoutDetailsPropsType) => {
 
     return (
         <main className="max-w-7xl w-full mx-auto px-6 py-16 space-y-16">
-            <div className="grid grid-cols-2 gap-14">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
                 <div>
                     <Image
                         src={workout.image}

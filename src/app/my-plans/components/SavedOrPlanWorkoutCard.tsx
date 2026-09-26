@@ -15,7 +15,7 @@ const SavedOrPlanWorkoutCard = ({
     selectedWorkout,
 }: SavedOrPlanWorkoutCardPropsType) => {
     return (
-        <div className="flex justify-between items-center flex-col sm:flex-row rounded-2xl bg-[#14171E] border border-[#232732] p-4">
+        <div className="flex sm:justify-between sm:items-center flex-col sm:flex-row gap-4 rounded-2xl bg-[#14171E] border border-[#232732] p-4">
             <div className="flex items-center gap-4">
                 <div className="h-20 w-36 shrink-0 overflow-hidden">
                     <Image
@@ -49,7 +49,7 @@ const SavedOrPlanWorkoutCard = ({
                     </div>
                 </div>
             </div>
-            <div className="font-inter flex items-center gap-3 text-xs">
+            <div className="font-inter flex items-center flex-row sm:flex-col md:flex-row gap-3 text-xs">
                 <Link href={`/workout-details/${selectedWorkout.id}`}>
                     <button className="flex justify-center items-center gap-3 rounded-xl font-medium border-2 border-[#374151] text-white px-4.5 py-2 transition-all duration-200 hover:scale-105 active:scale-95">
                         <span>View Details</span>
