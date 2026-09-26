@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import LibrarySection from "./components/LibrarySection";
+export const dynamic = "force-dynamic";
 
 export default function Home() {
     return (
