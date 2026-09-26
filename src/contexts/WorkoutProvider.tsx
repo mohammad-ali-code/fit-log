@@ -1,3 +1,5 @@
+"use client"
+
 import Workout from "@/types/workout";
 import React, {
     createContext,

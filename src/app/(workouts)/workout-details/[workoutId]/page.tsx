@@ -1,8 +1,8 @@
 import MuscleBadge from "@/components/MuscleBadge";
 import Workout from "@/types/workout";
 import Image from "next/image";
-import React from "react";
-import { LuBookmark, LuCalendarPlus2 } from "react-icons/lu";
+import AddToPlanButton from "./components/AddToPlanButton";
+import SaveForLaterButton from "./components/SaveForLaterButton";
 
 interface WorkoutDetailsPropsType {
     params: Promise<{ workoutId: string }>;
@@ -90,14 +90,8 @@ const WorkoutDetails = async ({ params }: WorkoutDetailsPropsType) => {
                         </ol>
                     </div>
                     <div className="font-inter flex gap-4">
-                        <button className="flex justify-center items-center gap-3 rounded-xl font-semibold text-black bg-[#CCFF00] px-6 py-3 transition-all duration-200 hover:bg-[#d4ff33] hover:scale-105 active:scale-95">
-                            <LuCalendarPlus2 />
-                            <span>Add to today&apos;s plan</span>
-                        </button>
-                        <button className="flex justify-center items-center gap-3 rounded-xl font-medium border-2 border-[#374151] text-white px-6 py-3 transition-all duration-200 hover:scale-105 active:scale-95">
-                            <LuBookmark />
-                            <span>Save for later</span>
-                        </button>
+                        <AddToPlanButton workout={workout}></AddToPlanButton>
+                        <SaveForLaterButton workout={workout}></SaveForLaterButton>
                     </div>
                 </div>
             </div>
