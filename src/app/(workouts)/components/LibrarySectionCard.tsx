@@ -1,10 +1,10 @@
 import Workout from "@/types/workout";
 import Image from "next/image";
-import LibrarySectionCardBadge from "./LibrarySectionCardBadge";
 import { PiFireSimpleFill } from "react-icons/pi";
 import { MdAccessTime } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa";
 import Link from "next/link";
+import MuscleBadge from "@/components/MuscleBadge";
 
 interface LibrarySectionCard {
     workout: Workout;
@@ -13,7 +13,7 @@ interface LibrarySectionCard {
 const LibrarySectionCard = ({ workout }: LibrarySectionCard) => {
     return (
         <Link href={`/workout-details/${workout.id}`}>
-            <div className="group cursor-pointer overflow-hidden rounded-2xl bg-[#15171D] border border-transparent transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#2A2E39] hover:shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
+            <div className="group cursor-pointer overflow-hidden rounded-2xl bg-[#15171D] border border-[#2A2E39] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#C2F800] hover:shadow-[0_12px_30px_rgba(0,0,0,0.35)]">
                 {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                     <Image
@@ -33,7 +33,7 @@ const LibrarySectionCard = ({ workout }: LibrarySectionCard) => {
                     <div>
                         <div className="mb-3 space-x-2">
                             {workout.muscleGroups.map((muscle, index) => (
-                                <LibrarySectionCardBadge
+                                <MuscleBadge
                                     key={index}
                                     muscle={muscle}
                                 />
