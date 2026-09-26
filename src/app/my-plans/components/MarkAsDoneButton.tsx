@@ -39,11 +39,7 @@ const MarkAsDoneButton = ({ selectedWorkout }: MarkAsDoneButtonPropsType) => {
         <button
             onClick={handleMarkAsDone}
             disabled={markedAsDone}
-            className={`flex justify-center items-center gap-1 rounded-xl font-semibold text-black px-4.5 py-2 transition-all duration-200 ${
-                markedAsDone
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-[#CCFF00] hover:bg-[#d4ff33] hover:scale-105 active:scale-95"
-            }`}>
+            className="flex justify-center items-center gap-1 rounded-xl font-semibold text-black bg-[#CCFF00]  px-4.5 py-2 transition-all duration-200 hover:bg-[#d4ff33] hover:scale-105 active:scale-95">
             <FaCheck />
             <span>Mark as Done</span>
         </button>
